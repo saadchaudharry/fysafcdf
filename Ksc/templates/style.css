@@ -1,0 +1,40 @@
+@font-face{
+    font-family:'benhard';
+      src:url(/static/bernhardmodernstd-roman.otf);
+      /*font-style:normal;*/
+      /*font-size: 100;*/
+      /*marging:0px;*/
+
+}
+@font-face{
+    font-family:'benguiat';
+      src:url(/static/benguiat bold.ttf);
+      /*font-style:normal;*/
+      /*font-size: 100;*/
+      /* padding:0px;*/
+}
+    body {
+    font-family: Roboto, Tahoma, Geneva, Verdana, sans-serif;
+    background: #fff;
+    color: #000;
+    font-size: 15px;
+    line-height: 1.5;
+}
+.fgrn{
+    color: #8db619;
+    /*color:#fb161d;*/
+}
+.cardcol{
+    background-color: #f1f1f1;
+}
+.underll{
+    border-bottom:solid 2px #8db619;
+}
+.sisnav{
+    position: sticky;
+    top:0px;
+}
+.naav{
+    padding-right:40px;
+    font-size: 18px
+}

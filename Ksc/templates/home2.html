@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+
+
+{% block body %}
+<br>
+
+{% for i in object_list %}
+    <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative mx-1">
+
+         <div class="col-4 col-md-6 text-center">
+          <img src="/media/{{ i.image }}" class="img-fluid ">
+        </div>
+
+        <div class="col-8 col-md-6  flex-column position-static p-2">
+{#          <strong class="d-inline-block mb-2 fgrn"></strong>#}
+          <h4 class="mb-0">{{ i.title }}</h4>
+          <div class="mb-1 text-muted">price:${{ i.price }}</div>
+          <p class="card-text mb-auto text-justify ">{{ i.description|slice:":50" }}.</p>
+          <a href="tel:82866 45300" type="button" class="btn btn-primary btn-sm">Call us </a>
+          <a href="{% url 'contactus' %}" type="button" class="btn btn-secondary btn-sm">Get latest price.</a>
+        </div>
+</div>
+{% endfor %}
+
+
+
+{% endblock %}
+

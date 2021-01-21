@@ -1,0 +1,50 @@
+
+html{scroll-behavior: smooth}
+body{background-color: #fefefe;  height: 100%;}
+.bg-pink{background-color:#f1234a}
+.bg-dblue{background-color: #22313f}
+.text-pink{color:#f1234a}
+.text-dblue{color:#22313f }
+.hrs{height: 2px;margin-right:80%}
+.hrs2{height: 2px;width: 10%}
+#heed{border-radius: 50px}
+
+/*22313fb3*/
+
+
+
+.imgs{background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('same.jpg');background-position: center;background-size:cover;}
+/*small phone */
+@media only screen and (max-width: 480px){
+	.herohead{font-size: 2.3em}
+	.connt{margin:0px 2px 0px }
+	.card-size {font-size: 120% }
+	.borx {font-size: 120% }
+ }
+
+/*medium phone*/
+@media only screen and (min-width: 480px) and (max-width: 768px) {
+	.herohead{font-size: 2.5em}
+	.connt{margin:0px 12px 0px}
+	.card-size {font-size: 2em}
+	.borx {font-size: 120% }
+}
+
+
+/*table and small pc*/
+@media only screen and (min-width: 768px) and (max-width: 959px){
+	.herohead{font-size: 2.5em}
+	.connt{margin:0px 12px 0px }
+	.card-size {font-size: 1.5em}
+	.borx {font-size:  1em }
+
+}
+
+/*pc*/
+@media only screen and (min-width: 959px){
+	.herohead{font-size: 3em}
+	.connt{margin:0px 80px 0px}
+	.card-size {font-size: 1.5em}
+	.borx {font-size: 1em}
+
+}

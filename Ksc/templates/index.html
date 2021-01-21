@@ -1,0 +1,118 @@
+ {% extends 'base.html' %}
+
+
+
+{% block body %}
+
+<!-- main head -->
+<div class="" style="background-image: url('/media/ez.gif');background-size: cover;background-position: center bottom;">
+<div id="heed" class=" headline rounded-0 text-white m-0 p-0 py-5 bg-pink" style="background:linear-gradient(176deg, #22313fc7 80%, #e9ecef calc(80% + 2px))" >
+
+  <div class=" showr py-5 mb-2 text-center ">
+    <h1 class="herohead font-weight-normal pt-2">Kapoor steel craft</h1>
+     <p class="lead">Mfg.Forging and Fastener</p>
+     <p>KAPOOR STEEL CRAFT(ksc) is one of the leading manufacturers and suppliers of nuts and bolts
+     <span id="typed"></span><span class="typed-cursor">|</span>
+     </p>
+<br>
+<a href="{% url 'about' %}" class="btn bg-danger text-white btn-lg lbt px-3 py-2">About Us</a>  </div>
+
+</div>
+	</div>
+
+
+<div class="jumbotron py-2 m-0">
+
+
+
+<div class="connt">
+	      <h2 class="text-center text-royal text-bold mt-0 pt-0" >Product</h2>
+          <hr class="bg-pink hrs2">
+      </div>
+
+<div class="row m-0 p-0">
+
+
+    {% for i in object_list  %}
+<div class="card col-6 col-md-3  rounded-0" >
+
+    <img src="/media/{{ i.image }}" class="card-img-top" alt="...">
+	<div class="card-body p-0 py-2">
+		<h4 class="card-text card-size text-bold text-left" >{{ i.title }}</h4>
+        <small class="card-text text-muted"><a href="/p/{{ i.slug }}" class="text-primary text-right">View &#8594</a></small>
+
+	</div>
+
+</div>
+{% endfor %}
+
+</div>
+
+
+
+
+
+<div class="py-2 ">
+{% if is_paginated %}
+  <ul class="pagination justify-content-center text-warning">
+    {% if page_obj.has_previous %}
+      <li class="page-link " ><a href="?page={{ page_obj.previous_page_number }}">&laquo;</a></li>
+    {% else %}
+      <li class="page-link  disabled"><span>&laquo;</span></li>
+    {% endif %}
+    {% for i in paginator.page_range %}
+      {% if page_obj.number == i %}
+        <li class="page-link active"><span>{{ i }} <span class="sr-only">(current)</span></span></li>
+      {% else %}
+        <li class="page-link"><a href="?page={{ i }}">{{ i }}</a></li>
+      {% endif %}
+    {% endfor %}
+    {% if page_obj.has_next %}
+      <li class="page-link"><a href="?page={{ page_obj.next_page_number }}">&raquo;</a></li>
+    {% else %}
+      <li class="page-link disabled"><span>&raquo;</span></li>
+    {% endif %}
+  </ul>
+{% endif %}
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+<div class="row m-0">
+	<div class="col-12 col-md-6 bg-danger text-white m-0 p-0 px-5 py-5">
+		<div>
+
+<h5 class="text-uppercase borx  font-weight-bold m-0">Nature of Business</h5>
+<h6 class="text-justify  font-weight-bold  text-dblue ">Manufacturer</h6><br>
+
+<h5 class="text-uppercase borx font-weight-bold  px-1 m-0">Year of Establishment</h5>
+<h6 class="text-justify  font-weight-bold  text-dblue ">2015</h6><br>
+
+<h5 class="text-uppercase borx font-weight-bold  px-1 m-0">Legal Status of Firm</h5>
+<h6 class="text-justify  font-weight-bold  text-dblue ">Individual - Proprietor</h6>
+<br>
+<h5 class="  text-uppercase  px-1 m-0">GSTIN <span style="color:#402125;">27EXEPK3168L1Z0</span></h5>
+<br>
+</div>
+	</div>
+
+
+	<div class="col-12 col-md-6 bg-dblue text-center">
+		 <img src="main.jpg" class="img-fluid prodimg px-4 py-3 m-0" >
+	</div>
+
+</div>
+
+
+
+
+
+{% endblock %}
+
